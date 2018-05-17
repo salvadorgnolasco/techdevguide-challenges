@@ -31,7 +31,7 @@ public class LongestWordSeekerTest {
   private LongestWordSeeker wordSeeker = new LongestWordSeeker(); 
   
   /**
-   * Should find the longest word in dictionary.
+   * Should find the longest word in dictionary. 
    */
   @Test
   public void shouldFindTheLongestWordInDictionary() {

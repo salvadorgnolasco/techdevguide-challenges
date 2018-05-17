@@ -25,7 +25,7 @@ import java.util.Arrays;
 public class LongestWordSeeker {
 
   /**
-   * Look for.
+   * Look for
    * Given a string S and a set of words D, find the longest word in D that 
    * is a subsequence of S.
    * @param inputWord input word
