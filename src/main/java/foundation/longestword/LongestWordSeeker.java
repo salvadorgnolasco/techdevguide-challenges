@@ -31,25 +31,25 @@ import java.util.Arrays;
 public class LongestWordSeeker {
 
   /**
-   * Look for
-   * Given a string S and a set of words D, find the longest word in D that 
-   * is a subsequence of S.
-   * @param inputWord input word
+   * Look for Given a string S and a set of words D, find the longest word in D
+   * that is a subsequence of S.
+   * 
+   * @param inputWord  input word
    * @param dictionary dictionary
    * @return string
    */
   public String lookFor(String inputWord, String[] dictionary) {
 
     Arrays.sort(dictionary);
-    
-    for(int index=dictionary.length-1 ; index>0; index--) {
-      if(isTheWordASubsequence(inputWord, dictionary[index]))
+
+    for (int index = dictionary.length - 1; index > 0; index--) {
+      if (isTheWordASubsequence(inputWord, dictionary[index]))
         return dictionary[index];
     }
-    
+
     return null;
   }
-  
+
   /**
    * Verify if the input word is a subsequence from a dictionaries word
    *
@@ -57,21 +57,19 @@ public class LongestWordSeeker {
    * @param dictionaryWord dictionary word
    * @return true, in case the condition is satisfied subsequence of
    */
-  private boolean isTheWordASubsequence(String inputWord, 
+  private boolean isTheWordASubsequence(String inputWord,
       String dictionaryWord) {
-    
-    int index = 0;
+
+    int spot = 0;
     int offset = 0;
-    
-    for(char character : dictionaryWord.toCharArray()) {
-      offset = inputWord.indexOf(character, index);
-      
-      if(offset >= index)
-        index = offset;
-      else
+
+    for (char item : dictionaryWord.toCharArray()) {
+
+      spot = (offset = inputWord.indexOf(item, spot)) >= spot ? offset : -1;
+      if (spot < 0)
         return false;
     }
-    
+
     return true;
   }
 }
