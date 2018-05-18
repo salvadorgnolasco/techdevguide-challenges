@@ -14,7 +14,7 @@
  * ---------------------------------------------------------------------------
  * File name: LongestWordSeekerTest.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 17/05/2018
+ * Creation Date: 18/05/2018
  * ---------------------------------------------------------------------------
  */
 
@@ -37,7 +37,7 @@ public class LongestWordSeekerTest {
   private LongestWordSeeker wordSeeker = new LongestWordSeeker(); 
   
   /**
-   * Should find the longest word in dictionary. 
+   * Should find the longest word in dictionary.
    */
   @Test
   public void shouldFindTheLongestWordInDictionary() {
@@ -47,6 +47,19 @@ public class LongestWordSeekerTest {
       new String[] {"able", "ale", "apple", "bale", "kangaroo"};
         
     assertEquals("apple", wordSeeker.lookFor(inputWord, dictionary));
+  }
+  
+  /**
+   * Should find one word at the end.
+   */
+  @Test 
+  public void shouldFindOneWordAtTheEnd() {
+    
+    String inputWord = "bxxxxxxxe";
+    String[] dictionary =
+      new String[] {"able", "be", "ale", "apple", "bale", "kangaroo"};
+        
+    assertEquals("be", wordSeeker.lookFor(inputWord, dictionary));
   }
   
   /**
