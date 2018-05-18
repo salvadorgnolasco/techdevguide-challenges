@@ -66,7 +66,7 @@ public class LongestWordSeeker {
     for (char item : dictionaryWord.toCharArray()) {
 
       spot = (offset = inputWord.indexOf(item, spot)) >= spot ? offset : -1;
-      if (spot == -1)
+      if (spot < 0)
         return false;
     }
 
