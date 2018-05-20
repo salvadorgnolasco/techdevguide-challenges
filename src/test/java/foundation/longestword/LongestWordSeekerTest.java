@@ -11,11 +11,11 @@
  * GNU General Public License for more details.
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * ---------------------------------------------------------------------------
+ * ----------------------------------------------------------------------------
  * File name: LongestWordSeekerTest.java
  * Original Author: Salvador Gonzalez N.
  * Creation Date: 18/05/2018
- * ---------------------------------------------------------------------------
+ * ----------------------------------------------------------------------------
  */
 
 package foundation.longestword;
@@ -35,6 +35,7 @@ public class LongestWordSeekerTest {
 
   /** word seeker. */
   private LongestWordSeeker wordSeeker = new LongestWordSeeker(); 
+  private LongestWordSeeker2 wordSeeker2 = new LongestWordSeeker2();
   
   /**
    * Should find the longest word in dictionary.
@@ -44,10 +45,28 @@ public class LongestWordSeekerTest {
 
     String inputWord = "abppplee";
     String[] dictionary =
-      new String[] {"able", "ale", "apple", "bale", "kangaroo"};
-        
+      new String[] {"able", "ale", "apple", "bale", "kangaroo"
+        ,"axxxxxxxxxxxxxx" , "bddddddddddddddd", "cccccccccccccccccc"
+        ,"hxxxxxxxxxxxxxx" , "gbddddddddddddddd", "xccccccccccccccccc"};
+
     assertEquals("apple", wordSeeker.lookFor(inputWord, dictionary));
   }
+  
+  /**
+   * Should find the longest word in dictionary.
+   */
+  @Test
+  public void shouldFindTheLongestWordInDictionary2() {
+
+    String inputWord = "abppplee";
+    String[] dictionary =
+      new String[] {"able", "ale", "apple", "bale", "kangaroo"
+        ,"axxxxxxxxxxxxxx" , "bddddddddddddddd", "cccccccccccccccccc"
+        ,"hxxxxxxxxxxxxxx" , "gbddddddddddddddd", "xccccccccccccccccc"};
+
+    assertEquals("apple", wordSeeker2.lookFor(inputWord, dictionary));
+  }
+  
   
   /**
    * Should find one word at the end.
