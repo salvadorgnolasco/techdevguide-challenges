@@ -34,7 +34,12 @@ public class StringSplosionTest {
 
   /** string splosion. */
   StringSplosion stringSplosion = new StringSplosion();
-
+  protected int valor = 0;
+  
+  public StringSplosionTest(){
+    
+  }
+  
   /**
    * Should expand word.
    */

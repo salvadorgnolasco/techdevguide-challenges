@@ -12,14 +12,51 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * ----------------------------------------------------------------------------
- * File name: MinesweeperTest.java
+ * File name: MaxSpan.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 18/05/2018
+ * Creation Date: 25/05/2018
  * ----------------------------------------------------------------------------
  */
 
-package foundation.minesweeper;
+package foundation.maxspan;
 
-public class MinesweeperTest {
+/**
+ * <code>MaxSpan</code>.
+ *
+ * @author Salvador Gonzalez N
+ * @version 1.0
+ */
+public class MaxSpan {
+
+  /**
+   * Calculate max span.
+   *
+   * @param arrayNumbers
+   *          array numbers
+   * @return int
+   */
+  public int calculateMaxSpan(int[] arrayNumbers) {
+
+    int span = 0;
+    int tempSpan = 0;
+
+    if (arrayNumbers.length == 0)
+      return 0;
+
+    for (int firstIndex = 0; firstIndex < arrayNumbers.length; firstIndex++) {
+      for (int lastIndex =
+        arrayNumbers.length - 1; lastIndex > firstIndex; lastIndex--)
+
+        if (arrayNumbers[firstIndex] == arrayNumbers[lastIndex]) {
+          tempSpan = lastIndex - firstIndex;
+          break;
+        }
+
+      if (tempSpan > span)
+        span = tempSpan;
+    }
+
+    return ++span;
+  }
 
 }

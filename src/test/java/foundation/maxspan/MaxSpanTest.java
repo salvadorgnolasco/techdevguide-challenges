@@ -12,14 +12,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * ----------------------------------------------------------------------------
- * File name: MinesweeperTest.java
+ * File name: MaxSpanTest.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 18/05/2018
+ * Creation Date: 25/05/2018
  * ----------------------------------------------------------------------------
  */
 
-package foundation.minesweeper;
+package foundation.maxspan;
 
-public class MinesweeperTest {
+import static org.junit.Assert.assertEquals;
 
+import org.junit.Test;
+
+public class MaxSpanTest {
+
+  private MaxSpan span = new MaxSpan();
+
+  /**
+   * Should get max span within two values.
+   */
+  @Test
+  public void shouldGetMaxSpanWithinTwoValues() {
+
+    int[] firstArray = new int[] {1, 2, 1, 1, 3};
+    int[] secondArray = new int[] {1, 4, 2, 1, 4, 1, 4};
+    int[] thirdArray = new int[] {1, 4, 2, 1, 4, 4, 4};
+
+    assertEquals(4, span.calculateMaxSpan(firstArray));
+    assertEquals(6, span.calculateMaxSpan(secondArray));
+    assertEquals(6, span.calculateMaxSpan(thirdArray));
+  }
 }
