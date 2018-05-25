@@ -12,43 +12,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * ----------------------------------------------------------------------------
- * File name: StringSplosionTest.java
+ * File name: MaxSpanTest.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 21/05/2018
+ * Creation Date: 25/05/2018
  * ----------------------------------------------------------------------------
  */
 
-package foundation.stringsplosion;
+package foundation.maxspan;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-/**
- * <code>StringSplosionTest</code>.
- *
- * @author Salvador Gonzalez N
- * @version 1.0
- */
-public class StringSplosionTest {
+public class MaxSpanTest {
 
-  /** string splosion. */
-  StringSplosion stringSplosion = new StringSplosion();
-  protected int valor = 0;
-  
-  public StringSplosionTest(){
-    
-  }
-  
+  private MaxSpan span = new MaxSpan();
+
   /**
-   * Should expand word.
+   * Should get max span within two values.
    */
   @Test
-  public void shouldExpandWord() {
+  public void shouldGetMaxSpanWithinTwoValues() {
 
-    assertEquals("CCoCodCode", stringSplosion.expand("Code"));
-    assertEquals("aababc", stringSplosion.expand("abc"));
-    assertEquals("aab", stringSplosion.expand("ab"));
+    int[] firstArray = new int[] {1, 2, 1, 1, 3};
+    int[] secondArray = new int[] {1, 4, 2, 1, 4, 1, 4};
+    int[] thirdArray = new int[] {1, 4, 2, 1, 4, 4, 4};
+
+    assertEquals(4, span.calculateMaxSpan(firstArray));
+    assertEquals(6, span.calculateMaxSpan(secondArray));
+    assertEquals(6, span.calculateMaxSpan(thirdArray));
   }
-
 }

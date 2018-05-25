@@ -12,43 +12,51 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * ----------------------------------------------------------------------------
- * File name: StringSplosionTest.java
+ * File name: MaxSpan.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 21/05/2018
+ * Creation Date: 25/05/2018
  * ----------------------------------------------------------------------------
  */
 
-package foundation.stringsplosion;
-
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
+package foundation.maxspan;
 
 /**
- * <code>StringSplosionTest</code>.
+ * <code>MaxSpan</code>.
  *
  * @author Salvador Gonzalez N
  * @version 1.0
  */
-public class StringSplosionTest {
+public class MaxSpan {
 
-  /** string splosion. */
-  StringSplosion stringSplosion = new StringSplosion();
-  protected int valor = 0;
-  
-  public StringSplosionTest(){
-    
-  }
-  
   /**
-   * Should expand word.
+   * Calculate max span.
+   *
+   * @param arrayNumbers
+   *          array numbers
+   * @return int
    */
-  @Test
-  public void shouldExpandWord() {
+  public int calculateMaxSpan(int[] arrayNumbers) {
 
-    assertEquals("CCoCodCode", stringSplosion.expand("Code"));
-    assertEquals("aababc", stringSplosion.expand("abc"));
-    assertEquals("aab", stringSplosion.expand("ab"));
+    int span = 0;
+    int tempSpan = 0;
+
+    if (arrayNumbers.length == 0)
+      return 0;
+
+    for (int firstIndex = 0; firstIndex < arrayNumbers.length; firstIndex++) {
+      for (int lastIndex =
+        arrayNumbers.length - 1; lastIndex > firstIndex; lastIndex--)
+
+        if (arrayNumbers[firstIndex] == arrayNumbers[lastIndex]) {
+          tempSpan = lastIndex - firstIndex;
+          break;
+        }
+
+      if (tempSpan > span)
+        span = tempSpan;
+    }
+
+    return ++span;
   }
 
 }
