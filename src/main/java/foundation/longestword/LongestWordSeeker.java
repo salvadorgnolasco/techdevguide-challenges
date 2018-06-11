@@ -1,6 +1,4 @@
 /* ----------------------------------------------------------------------------
- * All rights reserved © 2018 Salvador Gonzalez N.
- *  
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -14,7 +12,7 @@
  * ----------------------------------------------------------------------------
  * File name: LongestWordSeeker.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 18/05/2018
+ * Creation Date: Jun 10, 2018
  * ----------------------------------------------------------------------------
  */
 
@@ -25,16 +23,15 @@ import java.util.Arrays;
 /**
  * <code>LongestWordSeeker</code>.
  *
- * @author Salvador Gonzalez N
+ * @author salvador.gonzalez
  * @version 1.0
  */
 public class LongestWordSeeker {
 
   /**
-   * Look for Given a string S and a set of words D, find the longest word in D
-   * that is a subsequence of S.
-   * 
-   * @param inputWord  input word
+   * Look for.
+   *
+   * @param inputWord input word
    * @param dictionary dictionary
    * @return string
    */
@@ -51,14 +48,14 @@ public class LongestWordSeeker {
   }
 
   /**
-   * Verify if the input word is a subsequence from a dictionaries word
+   * Verify if that the word A subsequence is true.
    *
    * @param inputWord input word
    * @param dictionaryWord dictionary word
-   * @return true, in case the condition is satisfied subsequence of
+   * @return true, in case the condition is satisfied the word A subsequence
    */
   private boolean isTheWordASubsequence(String inputWord,
-      String dictionaryWord) {
+    String dictionaryWord) {
 
     int spot = 0;
     int offset = 0;

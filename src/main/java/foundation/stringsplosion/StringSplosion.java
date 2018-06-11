@@ -1,6 +1,4 @@
 /* ----------------------------------------------------------------------------
- * All rights reserved © 2018 Salvador Gonzalez N.
- *  
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -14,7 +12,7 @@
  * ----------------------------------------------------------------------------
  * File name: StringSplosion.java
  * Original Author: Salvador Gonzalez N.
- * Creation Date: 21/05/2018
+ * Creation Date: Jun 10, 2018
  * ----------------------------------------------------------------------------
  */
 
