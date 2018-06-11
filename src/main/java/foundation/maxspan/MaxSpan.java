@@ -38,20 +38,23 @@ public class MaxSpan {
     int span = 0;
     int tempSpan = 0;
 
-    if (arrayNumbers.length == 0)
+    if (arrayNumbers.length == 0) {
       return 0;
+    }
 
     for (int firstIndex = 0; firstIndex < arrayNumbers.length; firstIndex++) {
       for (int lastIndex =
-        arrayNumbers.length - 1; lastIndex > firstIndex; lastIndex--)
+          arrayNumbers.length - 1; lastIndex > firstIndex; lastIndex--) {
 
         if (arrayNumbers[firstIndex] == arrayNumbers[lastIndex]) {
           tempSpan = lastIndex - firstIndex;
           break;
         }
+      }
 
-      if (tempSpan > span)
+      if (tempSpan > span) {
         span = tempSpan;
+      }
     }
 
     return ++span;
