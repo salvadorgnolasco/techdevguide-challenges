@@ -15,6 +15,7 @@
  * Creation Date: Jun 10, 2018
  * ----------------------------------------------------------------------------
  */
+
 package foundation.sumnumbers;
 
 import static org.junit.Assert.assertEquals;

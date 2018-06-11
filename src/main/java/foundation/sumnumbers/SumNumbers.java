@@ -15,6 +15,7 @@
  * Creation Date: Jun 10, 2018
  * ----------------------------------------------------------------------------
  */
+
 package foundation.sumnumbers;
 
 /**
@@ -33,12 +34,14 @@ public class SumNumbers {
    */
   public int addUpNumbersWithinString(String str) {
     int sum = 0;    
-    String streamOfNumbers = str.replaceAll("[^0-9]", " ").replaceAll("[ ]+", " ").trim();
-    
-    if(streamOfNumbers.isEmpty())
+    String streamOfNumbers = str.replaceAll("[^0-9]", " ")
+        .replaceAll("[ ]+", " ").trim();
+     
+    if (streamOfNumbers.isEmpty()) {
       return sum;
+    }
     
-    for(String stringNumber : streamOfNumbers.split(" ")) {
+    for (String stringNumber : streamOfNumbers.split(" ")) {
       sum += Integer.parseInt(stringNumber);
     }
     

@@ -40,8 +40,9 @@ public class LongestWordSeeker {
     Arrays.sort(dictionary);
 
     for (int index = dictionary.length - 1; index > 0; index--) {
-      if (isTheWordASubsequence(inputWord, dictionary[index]))
+      if (isTheWordASubsequence(inputWord, dictionary[index])) {
         return dictionary[index];
+      }
     }
 
     return null;
@@ -55,15 +56,16 @@ public class LongestWordSeeker {
    * @return true, in case the condition is satisfied the word A subsequence
    */
   private boolean isTheWordASubsequence(String inputWord,
-    String dictionaryWord) {
+      String dictionaryWord) {
 
     int spot = 0;
     int offset = 0;
 
     for (char item : dictionaryWord.toCharArray()) {
       spot = (offset = inputWord.indexOf(item, spot)) >= spot ? offset : -1;
-      if (spot < 0)
+      if (spot < 0) {
         return false;
+      }
     }
 
     return true;

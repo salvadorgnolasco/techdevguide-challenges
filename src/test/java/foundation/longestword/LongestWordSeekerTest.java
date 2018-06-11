@@ -45,9 +45,9 @@ public class LongestWordSeekerTest {
 
     String inputWord = "abppplee";
     String[] dictionary =
-      new String[] {"able", "ale", "apple", "bale", "kangaroo"
-        ,"axxxxxxxxxxxxxx" , "bddddddddddddddd", "cccccccccccccccccc"
-        ,"hxxxxxxxxxxxxxx" , "gbddddddddddddddd", "xccccccccccccccccc"};
+      new String[] {"able", "ale", "apple", "bale", "kangaroo", 
+        "axxxxxxxxxxxxxx", "bddddddddddddddd", "cccccccccccccccccc", 
+        "hxxxxxxxxxxxxxx", "gbddddddddddddddd", "xccccccccccccccccc"};
 
     assertEquals("apple", wordSeeker.lookFor(inputWord, dictionary));
   }
@@ -60,9 +60,9 @@ public class LongestWordSeekerTest {
 
     String inputWord = "abppplee";
     String[] dictionary =
-      new String[] {"able", "ale", "apple", "bale", "kangaroo"
-        ,"axxxxxxxxxxxxxx" , "bddddddddddddddd", "cccccccccccccccccc"
-        ,"hxxxxxxxxxxxxxx" , "gbddddddddddddddd", "xccccccccccccccccc"};
+      new String[] {"able", "ale", "apple", "bale", "kangaroo", 
+          "axxxxxxxxxxxxxx", "bddddddddddddddd", "cccccccccccccccccc", 
+          "hxxxxxxxxxxxxxx", "gbddddddddddddddd", "xccccccccccccccccc"};
 
     assertEquals("apple", wordSeeker2.lookFor(inputWord, dictionary));
   }

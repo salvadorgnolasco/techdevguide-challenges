@@ -34,9 +34,9 @@ interface Compare {
 }
 
 /**
- * <code>LongestWordSeeker</code>.
+ * <code>LongestWordSeeker2</code>.
  *
- * @author Salvador Gonzalez N
+ * @author salvador.gonzalez
  * @version 1.0
  */
 public class LongestWordSeeker2 {
@@ -54,36 +54,36 @@ public class LongestWordSeeker2 {
 
     for (int index = dictionary.length - 1; index > 0; index--) {
       if (isTheWordASubsequence(inputWord, dictionary[index],
-        (String input, String dictionaryWord) -> {
+          (String input, String dictionaryWord) -> {
           int spot = 0;
           int offset = 0;
 
           for (char item : dictionaryWord.toCharArray()) {
             spot = (offset = input.indexOf(item, spot)) >= spot ? offset : -1;
-            if (spot < 0)
+            if (spot < 0) {
               return false;
+            }
           }
           return true;
-        })) {        
+        })) {
         return dictionary[index];
-      } 
+      }
     }
 
     return null;
   }
 
+
   /**
-   * Verify if the input word is a subsequence from a dictionaries word
+   * Verify if that the word A subsequence is true.
    *
-   * @param inputWord
-   *          input word
-   * @param dictionaryWord
-   *          dictionary word
-   * @return true, in case the condition is satisfied subsequence of
+   * @param inputWord input word
+   * @param dictionaryWord dictionary word
+   * @param compare compare
+   * @return true, in case the condition is satisfied the word A subsequence
    */
   private boolean isTheWordASubsequence(String inputWord,
-      String dictionaryWord,
-      Compare compare) {
+      String dictionaryWord, Compare compare) {
 
     return compare.isTheWordASubsequence(inputWord, dictionaryWord);
   }
