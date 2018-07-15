@@ -1,4 +1,4 @@
-/* ----------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------------------------
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -9,27 +9,58 @@
  * GNU General Public License for more details.
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * ----------------------------------------------------------------------------
- * File name: CanBalance.java
+ * ------------------------------------------------------------------------------------------------
  * Original Author: Salvador Gonzalez N.
- * Creation Date: Jun 27, 2018
- * ----------------------------------------------------------------------------
+ * Creation Date: Jul 8, 2018
+ * ------------------------------------------------------------------------------------------------
  */
 
 package foundation.canBalance;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.IntSummaryStatistics;
+import java.util.stream.Collectors;
 
+/**
+ * <code>CanBalance</code>.
+ *
+ * @author salvador.gonzalez
+ * @version 1.0
+ */
 public class CanBalance {
 
   /**
    * Can balance.
    *
-   * @param input input
+   * @param nums nums
    * @return true, if the condition is satisfied.
    */
-  public boolean canBalance(List<Integer> input) {
+  public boolean canBalance(int[] nums) {
 
-    return true;
+    ArrayList<Integer> input = new ArrayList<>(nums.length);
+    
+    for (int num : nums) {
+      input.add(num);
+    }
+
+    IntSummaryStatistics stats = input.stream().collect(Collectors.summarizingInt(n -> n));
+
+    if (stats.getCount() <= 1 || stats.getSum() % 2 != 0) { 
+      return false; 
+    }
+
+    int sum = 0;
+    long half = (stats.getSum() / 2);
+
+    for (int value : input) {
+      sum += value;
+      if (sum == half) {
+        return true;
+      } else if (sum > half) {
+        break;
+      }
+    }
+
+    return false;
   }
 }
