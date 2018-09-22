@@ -1,0 +1,6 @@
+projectKey=techdevguide:techdevguide-challenges
+serverUrl=http://localhost:9000
+serverVersion=6.7.5.38563
+dashboardUrl=http://localhost:9000/dashboard/index/techdevguide:techdevguide-challenges
+ceTaskId=AWX_5SajPfi-wOMwuqQv
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWX_5SajPfi-wOMwuqQv

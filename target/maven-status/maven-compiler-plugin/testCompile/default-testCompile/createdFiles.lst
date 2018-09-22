@@ -1,0 +1,9 @@
+foundation\canBalance\CanBalanceTest.class
+foundation\minesweeper\MinesweeperTest.class
+foundation\sumnumbers\SumNumbersTest.class
+foundation\stringsplosion\StringSplosionTest.class
+foundation\longestword\LongestWordSeekerTest.class
+foundation\withoutstring\WithoutStringTest.class
+foundation\hangman\domain\WordTest.class
+foundation\hangman\lexicon\HangmanLexiconTest.class
+foundation\maxspan\MaxSpanTest.class

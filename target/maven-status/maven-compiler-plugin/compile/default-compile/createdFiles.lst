@@ -1,0 +1,13 @@
+foundation\hangman\lexicon\HangmanLexicon.class
+foundation\stringsplosion\StringSplosion.class
+foundation\hangman\game\Hangman.class
+foundation\withoutstring\WithoutString.class
+foundation\minesweeper\Minesweeper.class
+foundation\hangman\HangmanStarter.class
+foundation\longestword\LongestWordSeeker.class
+foundation\hangman\domain\Word.class
+foundation\sumnumbers\SumNumbers.class
+foundation\canBalance\CanBalance.class
+foundation\maxspan\MaxSpan.class
+foundation\longestword\Compare.class
+foundation\longestword\LongestWordSeeker2.class
