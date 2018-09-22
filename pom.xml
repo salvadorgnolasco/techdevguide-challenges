@@ -108,6 +108,13 @@
 							<output>file</output>
 						</configuration>
 					</execution>
+					<execution>
+			            <id>report</id>
+			            <phase>prepare-package</phase>
+			            <goals>
+			                <goal>report</goal>
+			            </goals>
+			        </execution>
 				</executions>
 			</plugin>
 		</plugins>
