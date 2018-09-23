@@ -16,7 +16,7 @@ import foundation.canBalance.CanBalance;
 public class CanBalanceFeature {
 
   private int[] arrayToTest;
-  private Boolean result;
+  private Boolean result; 
   private CanBalance balancer = new CanBalance();
 
   @Given("^an array \"([^\"]*)\"$")

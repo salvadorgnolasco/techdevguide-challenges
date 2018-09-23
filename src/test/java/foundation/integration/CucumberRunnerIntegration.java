@@ -31,6 +31,6 @@ import cucumber.api.junit.Cucumber;
     "usage:target/cucumber-usage.json", 
     "junit:target/cucumber-results.xml" }  
  )
-public class CucumberRunner {
+public class CucumberRunnerIntegration {
   
 }
