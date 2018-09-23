@@ -1,5 +1,5 @@
 
-package foundation.feature;
+package foundation.integration.feature;
 
 import static org.junit.Assert.assertEquals;
 

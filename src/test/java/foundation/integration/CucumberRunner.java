@@ -1,4 +1,4 @@
-package foundation;
+package foundation.integration;
 
 import org.junit.runner.RunWith;
 
@@ -23,7 +23,7 @@ import cucumber.api.junit.Cucumber;
     outputFolder = "target")
 @CucumberOptions(
   features = "src/test/resources/features",
-  glue = "foundation/feature",
+  glue = "foundation/integration/feature",
   plugin = {
     "html:target", 
     "json:target/cucumber.json",
@@ -32,5 +32,5 @@ import cucumber.api.junit.Cucumber;
     "junit:target/cucumber-results.xml" }  
  )
 public class CucumberRunner {
-
+  
 }
